@@ -1,8 +1,10 @@
-# Wizard of Tasks Dataset - extractive QA extension
+# Wizard-of-Tasks **Extractive** (WoTe)
 
 ## Intro
 
-The dataset is a subset of the **Wizard of Tasks** dataset introduced by [Choi et al (2022)](https://aclanthology.org/2022.coling-1.310.pdf).
+The dataset is an extension of the **Wizard of Tasks** dataset introduced by [Choi et al (2022)](https://aclanthology.org/2022.coling-1.310.pdf).
+We create it for task-specific retrieval-augmented question answering.
+We aim to simulate a TaskBot QA system that can reason across task and conversation history to handle dynamic information requests.
 
 ## Dataset
 
@@ -44,7 +46,7 @@ We include the following new fields for each QA pair:
 - task steps
 - task ingredients
 - task description
-- task domain (~cooking~ or ~diy~)
+- task domain (*cooking* or *diy*)
 - annotated extracted answer span from context
 - annotated question type labels from one or more of 7 question categories (confirmation, complex, causal, listing, history, navigation)
 - data_split (if the question belongs to train, validation or test)

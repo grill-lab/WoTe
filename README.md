@@ -1,4 +1,4 @@
-# Wizard of Tasks Dataset - extractive QA extension
+# Wizard of Tasks Dataset - extractive QA extension
 
 ## Intro
 

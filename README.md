@@ -20,7 +20,7 @@ Each question was originally crowdsourced by crowdworkers by Choi et al. We use 
 Each conversation includes the following useful information:
 - document_url including a link to the current task
 
-We combine the user question turn with next the answe turn by the agent to result in the following information:
+We combine the user question turn with next the answer turn by the agent to result in the following information:
 - question text
 - answer text
 - binary answer usefulness
@@ -29,8 +29,11 @@ We combine the user question turn with next the answe turn by the agent to resul
 
 ### Filtering process
 
-TO DO
-... This results in 826 question-answer pairs
+1. Remove non-question utterances by crowd worker annotation -> 4251 QA pairs
+2. Filter out questions that are not internal by crowd worker answer intent annotation and external links linked -> 1589 QA pairs
+3. Drop all questions that are not useful or relevant by crowd worker annotation -> 1337 QA pairs
+4. Scrape all content from pages from linked document_url -> successful for 1109 QA pairs
+5. Annotation step to remove inconsistently labelled QA pairs which require common or external knowledge -> 827 QA pairs
 
 ### What is new from us?
 
@@ -54,7 +57,7 @@ An QA pair therefore contains the following fields:
     "conversation_id": "",
     "question_id": "",
     "question": "",
-    "original_answer": "",
+    "original_answer": "", # from original WoT crowd workers
     "extracted_answer": "",
     "document_url": "",
     "task_data": {
@@ -64,7 +67,11 @@ An QA pair therefore contains the following fields:
         "description": ""
     },
     "domain": "",
-    "question_type": []
+    "question_type": [],
+    "data_split: "",
+    "intent_question": "", # from original WoT annotations
+    "intent_answer": "", # from original WoT annotations
+    "history": ""
 }
 ```
 

@@ -5,6 +5,7 @@
 The dataset is an extension of the **Wizard of Tasks** dataset introduced by [Choi et al (2022)](https://aclanthology.org/2022.coling-1.310.pdf).
 We create it for task-specific retrieval-augmented question answering.
 We aim to simulate a TaskBot QA system that can reason across task and conversation history to handle dynamic information requests.
+Please find our paper [here](https://arxiv.org/abs/2402.07647).
 
 ## Dataset
 
@@ -87,3 +88,13 @@ We share all data split into train, validation and test split in the three follo
 | Test     | 412   |
 | Train    | 248   |
 | Validation | 167 |
+
+If you use WoTe, please cite the following paper: 
+
+```
+@INPROCEEDINGS{fischer2024grillbot,
+      title={GRILLBot In Practice: Lessons and Tradeoffs Deploying Large Language Models for Adaptable Conversational Task Assistants}, 
+      author={Sophie Fischer and Carlos Gemmell and Niklas Tecklenburg and Iain Mackie and Federico Rossetto and Jeffrey Dalton},
+      year={2024}
+}
+```
